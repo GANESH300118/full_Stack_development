@@ -1,0 +1,38 @@
+<html>
+    <head><title>My Webpage</title></head>
+    <body>
+        <form action="insertion.php" method="post">
+            SRoll &ensp;&emsp;:&nbsp;<input type="text" name="SRoll"><br>
+            Name  &ensp;&emsp;:&nbsp;<input type="text" name="fname"><br>
+            Age   &emsp;&emsp;&nbsp;:&nbsp;<input type="text" name="age"><br>
+            Email &ensp;&emsp;:&nbsp;<input type="email" name="email"><br>
+            PhoneNo&ensp;:&nbsp;<input type="text" name="phoneno"><br>
+            Gender&emsp;&nbsp;:
+            <input type="radio" id="Male" name="Gender" value="Male">Male
+            <input type="radio" id="Female" name="Gender" value="Female">Female<br>
+            Languages:
+            <input type="checkbox" id="C" name="cb1[]" value="C">C
+            <input type="checkbox" id="C++" name="cb1[]" value="C++">C++
+            <input type="checkbox" id="Java" name="cb1[]" value="Java">Java
+            <input type="checkbox" id="Python" name="cb1[]" value="Python">Python
+            <br><br>
+            <input type="submit">
+        </form>
+        <form action="modify.php" method="post">
+            Enter SRoll: <input type="text" name="SRoll"><br>
+            Enter New Name: <input type="text" name="newName"><br>
+            Enter New Age: <input type="text" name="newAge"><br>
+            Enter New Email: <input type="email" name="newEmail"><br>
+            Enter New PhoneNo: <input type="text" name="newPhoneNo"><br>
+            Enter New Gender&emsp;&nbsp;:
+            <input type="radio" id="Male" name="newGender" value="Male">Male
+            <input type="radio" id="Female" name="newGender" value="Female">Female<br>
+            Enter New Languages:
+            <input type="checkbox" id="C" name="newcb1[]" value="C">C
+            <input type="checkbox" id="C++" name="newcb1[]" value="C++">C++
+            <input type="checkbox" id="Java" name="newcb1[]" value="Java">Java
+            <input type="checkbox" id="Python" name="newcb1[]" value="Python">Python
+            <br><br>
+            <input type="submit" value="Modify">
+    </body>
+</html>

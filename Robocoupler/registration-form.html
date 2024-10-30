@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Form</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to right, #00aaff, #0055ff);
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-container {
+      background: white;
+      padding: 20px;
+      width: 400px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      color: #333;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    .form-group input[type="file"] {
+      padding: 0;
+    }
+
+    .form-group textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #0055ff;
+    }
+
+    .submit-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .submit-button button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0055ff;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-button button:hover {
+      background-color: #003bb5;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Internship Form</h1>
+    <form action="submit_form.php" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="name">Name <span style="color:red;">*</span></label>
+        <input type="text" id="name" name="name" placeholder="Enter name...." required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email <span style="color:red;">*</span></label>
+        <input type="email" id="email" name="email" placeholder="Enter email...." required />
+      </div>
+      <div class="form-group">
+        <label for="college">College Name <span style="color:red;">*</span></label>
+        <input type="text" id="college" name="college" placeholder="Enter college name...." required />
+      </div>
+      <div class="form-group">
+        <label for="branch">Branch <span style="color:red;">*</span></label>
+        <input type="text" id="branch" name="branch" placeholder="Enter Branch name...." required />
+      </div>
+      <div class="form-group">
+        <label for="domain">Interested Domain <span style="color:red;">*</span></label>
+        <select id="domain" name="domain" required>
+          <option value="">-SELECT-</option>
+          <option value="AI, ML, DL">AI, ML, DL (Artificial Intelligence, Machine Learning, Deep Learning)</option>
+          <option value="Robotics">Robotics</option>
+          <option value="Full Stack">Full Stack</option>
+          <option value="Aerodynamics">Aerodynamics</option>
+          <option value="3D Print Technology">3D Print Technology</option>
+          <option value="Embedded System">Embedded System</option>
+          <option value="Electric Vehicle Technology">Electric Vehicle Technology</option>
+          <option value="Mechatronics">Mechatronics</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number <span style="color:red;">*</span></label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter phone number...." required />
+      </div>
+      <div class="form-group">
+        <label for="queries">Any Queries (optional)</label>
+        <textarea id="queries" name="queries" placeholder="Enter query...."></textarea>
+      </div>
+      <div class="form-group">
+        <label for="resume">Resume <span style="color:red;">*</span></label>
+        <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required />
+      </div>
+      <div class="submit-button">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

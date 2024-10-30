@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weekly Timetable</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .timetable-container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: center;
+      border: 1px solid #ddd;
+      font-size: 16px;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .time {
+      background-color: #333;
+      color: white;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      th, td {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="timetable-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="time">09:00 - 10:00</td>
+          <td>Mathematics</td>
+          <td>Physics</td>
+          <td>Chemistry</td>
+          <td>Mathematics</td>
+          <td>Computer Science</td>
+        </tr>
+        <tr>
+          <td class="time">10:00 - 11:00</td>
+          <td>English</td>
+          <td>Computer Lab</td>
+          <td>Biology</td>
+          <td>Physics</td>
+          <td>Mathematics</td>
+        </tr>
+        <tr>
+          <td class="time">11:00 - 12:00</td>
+          <td>Physics</td>
+          <td>Chemistry</td>
+          <td>English</td>
+          <td>Computer Science</td>
+          <td>Biology</td>
+        </tr>
+        <tr>
+            <td class="time">12:00 - 01:00</td>
+            <td colspan="5">Lunch Break</td>
+          </tr>
+        <tr>
+          <td class="time">01:00 - 02:00</td>
+          <td>Chemistry</td>
+          <td>Mathematics</td>
+          <td>Physics</td>
+          <td>Biology</td>
+          <td>Chemistry</td>
+        </tr>
+        <tr>
+          <td class="time">02:00 - 03:00</td>
+          <td>Biology</td>
+          <td>Physics</td>
+          <td>Mathematics</td>
+          <td>Chemistry</td>
+          <td>Computer Lab</td>
+        </tr>
+        <tr>
+          <td class="time">03:00 - 04:00</td>
+          <td>Computer Science</td>
+          <td>English</td>
+          <td>Mathematics</td>
+          <td>Physics</td>
+          <td>Chemistry</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

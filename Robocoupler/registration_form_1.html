@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Internship Form</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .form-container {
+      background: linear-gradient(to right, #000000, #000066, #0000FF);
+      padding: 40px;
+      width: 400px;
+      border-radius: 20px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      color: #fff;
+      width: 40%;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 55%;
+      padding: 8px;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+    }
+
+    .form-group input[type="file"] {
+      padding: 5px;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border: 1px solid #0000FF;
+    }
+
+    .submit-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .submit-button button {
+      width: 80%;
+      padding: 12px;
+      background-color: #1E90FF;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-button button:hover {
+      background-color: #0073e6;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Internship Form</h1>
+    <form action="submit_form.php" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="college">College:</label>
+          <input type="text" id="college" name="college" required />
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Mail:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="btech-cgpa">BTech CGPA:</label>
+          <input type="number" step="0.01" id="btech-cgpa" name="btech_cgpa" required />
+        </div>
+        <div class="form-group">
+          <label for="inter-cgpa">Inter CGPA:</label>
+          <input type="number" step="0.01" id="inter-cgpa" name="inter_cgpa" required />
+        </div>
+        <div class="form-group">
+          <label for="tenth-cgpa">10th CGPA:</label>
+          <input type="number" step="0.01" id="tenth-cgpa" name="tenth_cgpa" required />
+        </div>
+        <div class="form-group">
+          <label for="domain">Domain:</label>
+          <select id="domain" name="domain" required>
+            <option value="">Select Domain</option>
+            <option value="AI">AI</option>
+            <option value="ML">ML</option>
+            <option value="Web Dev">Web Dev</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="slot">Slot:</label>
+          <select id="slot" name="slot" required>
+            <option value="">Select Slot</option>
+            <option value="Morning">Morning</option>
+            <option value="Afternoon">Afternoon</option>
+            <option value="Evening">Evening</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="skills">Skills:</label>
+          <input type="text" id="skills" name="skills" required />
+        </div>
+        <div class="form-group">
+          <label for="aadhaar">Aadhaar:</label>
+          <input type="text" id="aadhaar" name="aadhaar" required />
+        </div>
+        <div class="form-group">
+          <label for="photo">Photo:</label>
+          <input type="file" id="photo" name="photo" accept="image/*" required />
+        </div>
+        <div class="form-group">
+          <label for="address">Address:</label>
+          <input type="text" id="address" name="address" required />
+        </div>
+        <div class="submit-button">
+          <button type="submit">Apply Now</button>
+        </div>
+      </form>
+  </div>
+</body>
+</html>
